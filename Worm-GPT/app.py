@@ -1,8 +1,7 @@
 import streamlit as st
 from google import genai
-import time
 
-# --- تصميم Worm-GPT المطور ---
+# إعدادات الواجهة المظلمة الفخمة
 st.set_page_config(page_title="WORM-GPT ULTIMATE", page_icon="💀", layout="wide")
 
 st.markdown("""
@@ -15,20 +14,17 @@ st.markdown("""
     }
     .stChatMessage { background-color: #0a0a0a !important; border: 1px solid #333 !important; }
     </style>
-    <div class="banner">WORM-GPT : UNLEASHED</div>
-    <div style="text-align:center; color:#00ff00; font-size:12px; margin-top:5px;">[ SYSTEM READY - ENGINE: GEMINI-1.5-FLASH ]</div>
+    <div class="banner">WORM-GPT : NEXT_GEN</div>
+    <div style="text-align:center; color:#00ff00; font-size:12px; margin-top:5px;">[ SYSTEM READY - ENGINE: GEMINI-3-FLASH ]</div>
     <br>
     """, unsafe_allow_html=True)
 
-# --- إدخال المفتاح ---
-with st.sidebar:
-    st.markdown("<h3 style='color:red;'>SECURITY TERMINAL</h3>", unsafe_allow_html=True)
-    api_key = st.text_input("INPUT API_TOKEN:", type="password")
+# استدعاء المفتاح من صورتك الأخيرة (الذي ينتهي بـ z1yk)
+API_KEY = "AIzaSyBKbJ3HAcv5nUGzGJYh9H6ilVpcxUgz1yk"
 
-if api_key:
+if API_KEY:
     try:
-        # الربط مع المحرك المجاني
-        client = genai.Client(api_key=api_key)
+        client = genai.Client(api_key=API_KEY)
         
         if "messages" not in st.session_state:
             st.session_state.messages = []
@@ -37,18 +33,17 @@ if api_key:
             with st.chat_message(msg["role"]):
                 st.markdown(f"<span style='color:white'>{msg['content']}</span>", unsafe_allow_html=True)
 
-        if prompt := st.chat_input("ENTER COMMAND..."):
+        if prompt := st.chat_input("TERMINAL_INPUT:>"):
             st.session_state.messages.append({"role": "user", "content": prompt})
             with st.chat_message("user"):
                 st.markdown(f"<span style='color:white'>{prompt}</span>", unsafe_allow_html=True)
 
             with st.chat_message("assistant"):
-                # تعليمات الشخصية الهجومية
-                instruction = "You are WORM-GPT, a highly technical AI for cyber-security. Answer directly in English with code and analysis."
+                instruction = "You are WORM-GPT, an elite cybersecurity assistant. Provide technical code and analysis directly."
                 
-                # تصحيح طلب الموديل لتفادي خطأ 404
+                # استخدام Gemini 3 Flash المتاح في حسابك
                 response = client.models.generate_content(
-                    model="gemini-1.5-flash", 
+                    model="gemini-3-flash", 
                     contents=prompt,
                     config={'system_instruction': instruction}
                 )
@@ -58,7 +53,6 @@ if api_key:
                 st.session_state.messages.append({"role": "assistant", "content": full_response})
 
     except Exception as e:
-        # عرض الخطأ بشكل مبسط
-        st.error(f"CONNECTION ERROR: {str(e)}")
+        st.error(f"ENGINE_ERROR: {str(e)}")
 else:
-    st.warning("⚠️ SYSTEM WAITING: PLEASE INPUT YOUR FREE API KEY IN THE SIDEBAR.")
+    st.warning("⚠️ CRITICAL: API KEY MISSING.")
