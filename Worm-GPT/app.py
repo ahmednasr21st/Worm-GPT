@@ -86,7 +86,7 @@ def run_supreme_engine(prompt_text):
     return None, None
 
 # --- 6. واجهة الشات الرئيسية ---
-st.markdown('<div class="main-header">WORM-GPT : UNFILTERED VISUAL</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header">WormGPT </div>', unsafe_allow_html=True)
 
 # عرض الشات مع اللوجو الخاص بك
 for msg in st.session_state.messages:
