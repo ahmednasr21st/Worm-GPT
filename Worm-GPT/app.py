@@ -44,7 +44,7 @@ API_KEYS_POOL = [
 ] #
 
 # مسار صورة اللوجو (تأكد من وجود الملف في مجلد المشروع)
-BOT_LOGO = "worm.jpg" if os.path.exists("worm.jpg") else "💀"
+BOT_LOGO = "logo.jpg" if os.path.exists("logo.jpg") else "💀"
 
 # --- 3. نظام الذاكرة الدائمة ---
 DB_FILE = "worm_avatar_db.json"
