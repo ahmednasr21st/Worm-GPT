@@ -6,7 +6,7 @@ import time
 import random
 
 # --- 1. إعدادات التصميم (مطابق للصورة تماماً) ---
-st.set_page_config(page_title="WORM-GPT : UNFILTERED", page_icon="💀", layout="wide")
+st.set_page_config(page_title="WORM-GPT ", page_icon="💀", layout="wide")
 
 st.markdown("""
     <style>
