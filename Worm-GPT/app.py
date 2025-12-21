@@ -40,7 +40,7 @@ API_KEYS_POOL = [
 
 # رابط صورة اللوجو الأحمر التي أرفقتها
 # تأكد من رفع ملف الصورة باسم logo.jpg في نفس المجلد
-BOT_AVATAR = "logo.jpg" if os.path.exists("logo.jpg") else "💀"
+BOT_AVATAR = "Worm-GPT/logo.jpg" if os.path.exists("Worm-GPT/logo.jpg") else "💀"
 
 # --- 3. إدارة الذاكرة الدائمة ---
 DB_FILE = "worm_unfiltered_db.json"
