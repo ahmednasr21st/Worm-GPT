@@ -96,7 +96,7 @@ def run_worm_engine(prompt):
     return None, None
 
 # --- 6. واجهة الشات الرئيسية (بعد التفعيل) ---
-st.markdown('<div class="main-header">WORM-GPT : SUPREME v20.0</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header">WormGPT</div>', unsafe_allow_html=True)
 if "messages" not in st.session_state: st.session_state.messages = []
 
 for msg in st.session_state.messages:
