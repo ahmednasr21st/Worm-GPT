@@ -7,7 +7,7 @@ import random
 from datetime import datetime, timedelta
 
 # --- 1. إعدادات الهوية البصرية (ChatGPT Unfiltered Style) ---
-st.set_page_config(page_title="WORM-GPT SUPREME", page_icon="💀", layout="wide")
+st.set_page_config(page_title="WORM-GPT ", page_icon="💀", layout="wide")
 
 st.markdown("""
     <style>
@@ -117,7 +117,7 @@ def worm_supreme_engine(prompt):
     return None, None
 
 # --- 5. واجهة الشات الرئيسية (بعد التفعيل) ---
-st.markdown('<div class="main-header">WORM-GPT : SUPREME v21.0</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header">WormGPT </div>', unsafe_allow_html=True)
 
 if "messages" not in st.session_state: st.session_state.messages = []
 
