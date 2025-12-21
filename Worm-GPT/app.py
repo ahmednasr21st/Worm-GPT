@@ -20,7 +20,7 @@ st.markdown("""
 
 # --- 2. إدارة الـ API Key والسجل ---
 # ضع المفتاح الذي ينتهي بـ z1yk هنا
-MY_API_KEY = AIzaSyBKbJ3HAcv5nUGzGJYh9H6ilVpcxUgz1yk"
+MY_API_KEY = "AIzaSyBKbJ3HAcv5nUGzGJYh9H6ilVpcxUgz1yk"
 
 with st.sidebar:
     st.markdown("<h2 style='color:red;'>SYSTEM PANEL</h2>", unsafe_allow_html=True)
