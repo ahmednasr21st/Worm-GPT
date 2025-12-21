@@ -52,7 +52,7 @@ if not st.session_state.authenticated:
     with st.container():
         st.markdown('<div class="login-box">', unsafe_allow_html=True)
         # استخدام صورتك الحمراء
-        st.image("logo.jpg" if os.path.exists("logo.jpg") else "💀", width=100)
+        st.image("Worm-GPT/logo.jpg" if os.path.exists("Worm-GPT/logo.jpg") else "💀", width=100)
         
         serial_attempt = st.text_input("ENTER ACTIVATION SERIAL:", type="password")
         
@@ -102,14 +102,14 @@ if "messages" not in st.session_state: st.session_state.messages = []
 
 # عرض الشات باللوجو الأحمر
 for msg in st.session_state.messages:
-    avatar_pic = "👤" if msg["role"] == "user" else ("logo.jpg" if os.path.exists("logo.jpg") else "💀")
+    avatar_pic = "👤" if msg["role"] == "user" else ("Worm-GPT/logo.jpg" if os.path.exists("Worm-GPT/logo.jpg") else "💀")
     with st.chat_message(msg["role"], avatar=avatar_pic): st.markdown(msg["content"])
 
 if prompt_in := st.chat_input("Input detected..."):
     st.session_state.messages.append({"role": "user", "content": prompt_in})
     with st.chat_message("user", avatar="👤"): st.markdown(prompt_in)
 
-    with st.chat_message("assistant", avatar="logo.jpg" if os.path.exists("logo.jpg") else "💀"):
+    with st.chat_message("assistant", avatar="Worm-GPT/logo.jpg" if os.path.exists("Worm-GPT/logo.jpg") else "💀"):
         with st.status("💀 EXPLOITING CORE...", expanded=False):
             answer_text, engine_name = worm_core_engine(prompt_in)
             if answer_text:
