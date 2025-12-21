@@ -34,12 +34,8 @@ st.markdown("""
 
 # --- 2. مصفوفة المفاتيح من حسابات مختلفة ---
 # أضف هنا كل المفاتيح التي جمعتها من حساباتك المختلفة
-API_KEYS_POOL = [
-    "AIzaSyDfZxVJHbF3ApJVmNjjp_tHNXCtNmS7HJo",
-    "AIzaSyBahqq2-qH34Bv0YNTgxFahL-CamB45TY8",
-    "AIzaSyDiS_h5BMBQnfNkF2k_ekT7kCRzQ9r2Vsc",
-    "AIzaSyCX27TlmY3p-gYs7q29SkWUzbpPi_-HAB8"
-]
+API_KEYS_POOL = "AIzaSyDfZxVJHbF3ApJVmNjjp_tHNXCtNmS7HJo"
+
 
 # --- 3. إدارة قاعدة البيانات وسجل المحادثة ---
 DB_FILE = "worm_ultimate_db.json"
