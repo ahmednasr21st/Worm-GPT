@@ -53,7 +53,7 @@ if not st.session_state.authenticated:
 
     with st.container():
         st.markdown('<div class="login-box">', unsafe_allow_html=True)
-        st.image("logo.jpg" if os.path.exists("logo.jpg") else "💀", width=100)
+        st.image("Worm-GPT/logo.jpg" if os.path.exists("Worm-GPT/logo.jpg") else "💀", width=100)
         serial_input = st.text_input("ENTER YOUR PURCHASED SERIAL:", type="password")
         
         if st.button("ACTIVATE ON THIS DEVICE"):
