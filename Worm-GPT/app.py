@@ -39,7 +39,7 @@ API_KEYS_POOL = [
     "AIzaSyDfZxVJHbF3ApJVmNjjp_tHNXCtNmS7HJo"
 ] #
 
-BOT_AVATAR = "logo.jpg" if os.path.exists("logo.jpg") else "💀" #
+BOT_AVATAR = "Worm-GPT/logo.jpg" if os.path.exists("Worm-GPT/logo.jpg") else "💀" #
 DB_FILE = "worm_secure_db.json"
 
 # --- 4. واجهة الدخول (Login Page) ---
