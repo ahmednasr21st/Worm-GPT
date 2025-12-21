@@ -27,7 +27,7 @@ st.markdown("""
 
 # --- 2. إدارة التراخيص وحماية الجهاز (حل مشكلة 1000395036.jpg) ---
 DB_FILE = "worm_secure_vault.json"
-BOT_LOGO = "logo.jpg" if os.path.exists("logo.jpg") else "💀" #
+BOT_LOGO = "Worm-GPT/logo.jpg" if os.path.exists("Worm-GPT/logo.jpg") else "💀" #
 
 def load_db():
     if os.path.exists(DB_FILE):
