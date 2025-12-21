@@ -23,7 +23,7 @@ if OR_API_KEY:
     try:
         # الربط بـ OpenRouter (لاحظ الـ base_url مهم جداً)
         client = OpenAI(
-            base_url="https://openrouter.ai/api/v1",
+            base_url="https://openrouter.ai/chat?models=nvidia/llama-3.1-nemotron-ultra-253b-v1",
             api_key=OR_API_KEY,
         )
 
