@@ -115,4 +115,4 @@ if user_input := st.chat_input("TERMINAL ACCESS:>"):
                 st.session_state.messages.append({"role": "assistant", "content": answer})
                 # ضمان بقاء الشات مثل ChatGPT
                 time.sleep(0.3)
-                st.rerun()rerun()
+                st.rerun()
