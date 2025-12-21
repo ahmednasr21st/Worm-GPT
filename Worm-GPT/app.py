@@ -19,7 +19,7 @@ st.markdown("""
 
 # --- 2. مصفوفة المفاتيح (ضع أكبر عدد ممكن هنا) ---
 API_KEYS_POOL = [
-    "AIzaSyA77Ud4tIHrfBH8BWe9H-aU14-za8AG5oo",
+    "AIzaSyDfZxVJHbF3ApJVmNjjp_tHNXCtNmS7HJo",
     "AIzaSyAdEK5quY6RDyvGOa1Z0HreuXKuWLQQj-U",
     "AIzaSyCAmblsgb04m7DnjYWMWGElknpsUjjxHHI",
     "AIzaSyAG4CgNkB674hbvxe-mAg5DnK5wLahbshM",
