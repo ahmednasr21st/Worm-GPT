@@ -18,8 +18,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # ضع مفتاح OpenAI الأصلي بتاعك هنا (يبدأ بـ sk-proj-...)
-OPENAI_API_KEY = "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"
-
+OPENAI_API_KEY = "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"
 if OPENAI_API_KEY:
     try:
         # الاتصال المباشر بـ OpenAI
