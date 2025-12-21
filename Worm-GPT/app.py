@@ -28,7 +28,7 @@ st.markdown("""
 
     .stChatInputContainer { background: #0d1117 !important; border-top: 1px solid #30363d !important; }
     </style>
-    <div class="main-header">WORM-GPT : UNFILTERED VISUAL</div>
+    <div class="main-header">WORM-GPT </div>
     """, unsafe_allow_html=True)
 
 # --- 2. مصفوفة المفاتيح لفك الـ Limit ---
