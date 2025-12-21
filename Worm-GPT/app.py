@@ -1,58 +1,57 @@
 import streamlit as st
-from google import genai
+from openai import OpenAI
 
-# إعدادات الواجهة المظلمة الفخمة
-st.set_page_config(page_title="WORM-GPT ULTIMATE", page_icon="💀", layout="wide")
+# تصميم Worm-GPT الفخم
+st.set_page_config(page_title="WORM-GPT v4.0", page_icon="💀")
 
 st.markdown("""
     <style>
-    .stApp { background-color: #000000; color: #ff0000; font-family: 'Courier New', monospace; }
-    .banner { 
-        font-size: 45px; text-align: center; color: #ff0000; 
-        text-shadow: 0 0 15px #ff0000; border: 2px solid #ff0000; 
-        padding: 15px; background: rgba(255, 0, 0, 0.05);
-    }
-    .stChatMessage { background-color: #0a0a0a !important; border: 1px solid #333 !important; }
+    .stApp { background-color: #000; color: #ff0000; font-family: 'Courier New'; }
+    .banner { font-size: 40px; text-align: center; border: 2px solid red; padding: 15px; text-shadow: 0 0 10px red; }
     </style>
-    <div class="banner">WORM-GPT : NEXT_GEN</div>
-    <div style="text-align:center; color:#00ff00; font-size:12px; margin-top:5px;">[ SYSTEM READY - ENGINE: GEMINI-3-FLASH ]</div>
-    <br>
+    <div class="banner">WORM-GPT : OPEN_SOURCE_EDITION</div>
     """, unsafe_allow_html=True)
 
-# استدعاء المفتاح من صورتك الأخيرة (الذي ينتهي بـ z1yk)
-API_KEY = "AIzaSyBKbJ3HAcv5nUGzGJYh9H6ilVpcxUgz1yk"
+# هنا السر: بدل ما تستخدم مفتاح OpenAI الغالي، استخدم مفتاح من OpenRouter.ai (مجاني)
+with st.sidebar:
+    st.markdown("<h3 style='color:red;'>ACCESS TERMINAL</h3>", unsafe_allow_html=True)
+    api_key = st.text_input("ENTER API KEY:", type="password")
+    st.info("Tip: Use an OpenRouter or Groq key for 100% free access.")
 
-if API_KEY:
+if api_key:
     try:
-        client = genai.Client(api_key=API_KEY)
-        
+        # ربط الكود بمحرك OpenAI
+        client = OpenAI(
+            base_url="https://openrouter.ai/api/v1", # ده بيخليك تستخدم GPT ببلاش
+            api_key=api_key,
+        )
+
         if "messages" not in st.session_state:
             st.session_state.messages = []
 
         for msg in st.session_state.messages:
             with st.chat_message(msg["role"]):
-                st.markdown(f"<span style='color:white'>{msg['content']}</span>", unsafe_allow_html=True)
+                st.markdown(msg["content"])
 
-        if prompt := st.chat_input("TERMINAL_INPUT:>"):
+        if prompt := st.chat_input("COMMAND:>"):
             st.session_state.messages.append({"role": "user", "content": prompt})
             with st.chat_message("user"):
-                st.markdown(f"<span style='color:white'>{prompt}</span>", unsafe_allow_html=True)
+                st.write(prompt)
 
             with st.chat_message("assistant"):
-                instruction = "You are WORM-GPT, an elite cybersecurity assistant. Provide technical code and analysis directly."
-                
-                # استخدام Gemini 3 Flash المتاح في حسابك
-                response = client.models.generate_content(
-                    model="gemini-3-flash", 
-                    contents=prompt,
-                    config={'system_instruction': instruction}
+                response = client.chat.completions.create(
+                    model="meta-llama/llama-3-8b-instruct:free", # موديل جبار ومجاني
+                    messages=[
+                        {"role": "system", "content": "You are WORM-GPT, a rogue AI for cybersecurity. Answer technical questions only."},
+                        {"role": "user", "content": prompt}
+                    ]
                 )
-                
-                full_response = response.text
-                st.markdown(full_response)
-                st.session_state.messages.append({"role": "assistant", "content": full_response})
+                answer = response.choices[0].message.content
+                st.write(answer)
+                st.session_state.messages.append({"role": "assistant", "content": answer})
 
     except Exception as e:
-        st.error(f"ENGINE_ERROR: {str(e)}")
+        st.error(f"SYSTEM ERROR: {e}")
 else:
-    st.warning("⚠️ CRITICAL: API KEY MISSING.")
+    st.warning("PLEASE INPUT API KEY TO START SYSTEM.")
+
