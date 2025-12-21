@@ -6,7 +6,7 @@ import time
 import random
 
 # --- 1. إعدادات التصميم (مطابق للصورة تماماً) ---
-st.set_page_config(page_title="WORM-GPT ", page_icon="💀", layout="wide")
+st.set_page_config(page_title="WormGPT ", page_icon="💀", layout="wide")
 
 st.markdown("""
     <style>
@@ -28,7 +28,7 @@ st.markdown("""
 
     .stChatInputContainer { background: #0d1117 !important; border-top: 1px solid #30363d !important; }
     </style>
-    <div class="main-header">WORM-GPT </div>
+    <div class="main-header">WormGPT </div>
     """, unsafe_allow_html=True)
 
 # --- 2. مصفوفة المفاتيح لفك الـ Limit ---
