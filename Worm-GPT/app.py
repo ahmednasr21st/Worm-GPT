@@ -27,14 +27,7 @@ st.markdown("""
 
 # --- 2. إعدادات الـ API والاشتراكات ---
 # ضع مفاتيحك هنا لتوزيع الأحمال
-MY_APIS = ["AIzaSyDiS_h5BMBQnfNkF2k_ekT7kCRzQ9r2Vsc",
-           "AIzaSyBahqq2-qH34Bv0YNTgxFahL-CamB45TY8",
-           "AIzaSyDfZxVJHbF3ApJVmNjjp_tHNXCtNmS7HJo",
-           "AIzaSyAG4CgNkB674hbvxe-mAg5DnK5wLahbshM",
-           "AIzaSyCEDTQPqZQn1m6WSVRGVX4Ej5V_OZUTvkA",
-           "AIzaSyA3yImZixbR9cfHItYcOthdhKP7V-Arnr8",
-           "AIzaSyATQGAIdVwdFhCucEePvU1glfMyjqrT140"
-          ]
+MY_APIS = ["AIzaSyAmq528fCroEZC2pSvF0b8xV5wlxMECrBw"]
 
 # السيريالات المتاحة للبيع ومدة كل واحد بالأيام
 AVAILABLE_KEYS = {
