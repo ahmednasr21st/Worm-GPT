@@ -180,4 +180,4 @@ if all_chats[u_token][c_id]["messages"] and all_chats[u_token][c_id]["messages"]
             st.markdown(ans)
             all_chats[u_token][c_id]["messages"].append({"role": "assistant", "content": ans})
             save_data(CHAT_FILE, all_chats)
-            st.rerun())
+            st.rerun()
