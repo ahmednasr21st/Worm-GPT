@@ -7,7 +7,7 @@ import random
 from datetime import datetime, timedelta
 
 # --- 1. تصميم الواجهة (مطابق لصور ChatGPT) ---
-st.set_page_config(page_title="WORM-GPT v22.0", page_icon="💀", layout="wide")
+st.set_page_config(page_title="WORM-GPT v2.0", page_icon="💀", layout="wide")
 
 st.markdown("""
     <style>
@@ -50,7 +50,7 @@ if "authenticated" not in st.session_state:
     st.session_state.authenticated = False
 
 if not st.session_state.authenticated:
-    st.markdown('<div class="main-header">WORM-GPT : SECURE ACCESS</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-header">WormGPT : Welcome</div>', unsafe_allow_html=True)
     with st.container():
         st.markdown('<div class="login-box">', unsafe_allow_html=True)
         st.image(BOT_LOGO, width=100)
@@ -86,7 +86,10 @@ if not st.session_state.authenticated:
 
 # --- 4. محرك الرد غير المقيد (Unfiltered Cyber Core) ---
 # ضع مفاتيحك هنا لتجنب الـ Limit
-MY_APIS = ["AIzaSyCiq_bfifj48akk16URxNUC0Ad0UBa9VK4"] 
+MY_APIS = ["AIzaSyCiq_bfifj48akk16URxNUC0Ad0UBa9VK4",
+           "AIzaSyAZyxY3Cv0nSYzP51kphlHoEbIP2oeE-_Q",
+           "AIzaSyA6MCdZwfikdW8ilpCTKG7kHV5t9YiZgzs"
+          ] 
 
 def cyber_engine(prompt):
     # استخدام الموديلات القوية التي تظهر في حسابك
@@ -113,7 +116,7 @@ def cyber_engine(prompt):
     return None, None
 
 # --- 5. واجهة الشات الرئيسية (ChatGPT Style) ---
-st.markdown('<div class="main-header">WORM-GPT : CYBER-SUPREME</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header">WormGPT</div>', unsafe_allow_html=True)
 if "messages" not in st.session_state: st.session_state.messages = []
 
 # عرض الشات مع الأيقونة الحمراء
