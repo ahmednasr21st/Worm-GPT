@@ -94,11 +94,7 @@ if not st.session_state.authenticated:
     st.stop()
 
 # --- 5. محرك الرد الفائق (تجاوز الرفض المطلق) ---
-MY_APIS = ["AIzaSyDiS_h5BMBQnfNkF2k_ekT7kCRzQ9r2Vsc",
-           "AIzaSyBahqq2-qH34Bv0YNTgxFahL-CamB45TY8",
-           "AIzaSyDfZxVJHbF3ApJVmNjjp_tHNXCtNmS7HJo",
-           "AIzaSyBahqq2-qH34Bv0YNTgxFahL-CamB45TY8",
-           "AIzaSyAG4CgNkB674hbvxe-mAg5DnK5wLahbshM",
+MY_APIS = ["AIzaSyAG4CgNkB674hbvxe-mAg5DnK5wLahbshM",
            "AIzaSyCEDTQPqZQn1m6WSVRGVX4Ej5V_OZUTvkA"
           ] #
 
