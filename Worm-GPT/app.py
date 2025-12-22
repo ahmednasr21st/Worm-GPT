@@ -146,7 +146,7 @@ st.markdown('<div class="main-header">WormGPT Console</div>', unsafe_allow_html=
 
 with st.sidebar:
     st.markdown("<div style='text-align:center;'>", unsafe_allow_html=True)
-    st.image("logo.jpg" if os.path.exists("logo.jpg") else "💀", width=90)
+    st.image("Worm-GPT/logo.jpg" if os.path.exists("Worm-GPT/logo.jpg") else "💀", width=90)
     st.markdown(f"<b>Status:</b> <span style='color:#238636;'>Active</span>", unsafe_allow_html=True)
     
     # إصلاح خطأ الصورة 9b80da5f
