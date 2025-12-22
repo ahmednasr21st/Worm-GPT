@@ -40,7 +40,7 @@ def save_db(db):
     with open(DB_FILE, "w") as f: json.dump(db, f)
 
 # السيريالات المتاحة (شهر - سنة - يوم)
-VALID_KEYS = {"WORM-MONTH-2025": 30, "WORM-VIP-99": 365, "DEV-TEST": 1}
+VALID_KEYS = {"WORM-MONTH-2025": 30, "WORM-VIP-99": 365, "DEV-TEST": 1, "WORM-AHMED": 365}
 
 # --- 3. نظام "البقاء مسجلاً" (Auto-Login System) ---
 # بصمة جهاز فريدة تعتمد على معلومات المتصفح (مبتتغيرش بالـ Refresh)
