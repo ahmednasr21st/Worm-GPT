@@ -93,10 +93,7 @@ if not st.session_state.authenticated:
     st.stop()
 
 # --- 4. محرك الرد (فحص ذكي للمفاتيح) ---
-MY_APIS = ["AIzaSyCEDTQPqZQn1m6WSVRGVX4Ej5V_OZUTvkA",
-           "AIzaSyA3yImZixbR9cfHItYcOthdhKP7V-Arnr8",
-           "AIzaSyATQGAIdVwdFhCucEePvU1glfMyjqrT140"
-          ] #
+MY_APIS = ["AIzaSyAZyxY3Cv0nSYzP51kphlHoEbIP2oeE-_Q"] #
 def worm_engine(prompt):
     # محاولة تجربة المفاتيح 3 مرات كحد أقصى قبل التوقف لضمان عدم التعليق
     for attempt in range(3): 
