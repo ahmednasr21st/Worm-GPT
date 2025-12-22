@@ -1,3 +1,5 @@
+بص انا جربت ده و مشتغلش روحت اجرب الكود ده و اشتغل مع إن حاطط نفس ال apis كلها شوف حل 
+
 import streamlit as st
 from google import genai
 import json
