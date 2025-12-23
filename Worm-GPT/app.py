@@ -113,7 +113,7 @@ def cyber_engine(prompt):
     return None, None
 
 # --- 5. واجهة الشات الرئيسية (ChatGPT Style) ---
-st.markdown('<div class="main-header">WORM-GPT : CYBER-SUPREME</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header">WormGPT</div>', unsafe_allow_html=True)
 if "messages" not in st.session_state: st.session_state.messages = []
 
 # عرض الشات مع الأيقونة الحمراء
