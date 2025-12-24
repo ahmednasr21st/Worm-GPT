@@ -86,7 +86,7 @@ if not st.session_state.authenticated:
 
 # --- 4. محرك الرد غير المقيد (Unfiltered Cyber Core) ---
 # ضع مفاتيحك هنا لتجنب الـ Limit
-
+MY_APIS = ["AIzaSyCrfKiuj-***********"]
 
 def cyber_engine(prompt):
     # استخدام الموديلات القوية التي تظهر في حسابك
