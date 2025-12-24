@@ -41,7 +41,8 @@ def save_db(db):
 VALID_KEYS = {
     "WORM-MONTH-2025": 30,
     "VIP-HACKER-99": 365,
-    "WORM-AHMED-99":365
+    "WORM-AHMED-99":365,
+    "WORM-AHMED-00":365
 }
 
 # --- 3. نظام الدخول والبقاء مسجلاً (Permanency) ---
