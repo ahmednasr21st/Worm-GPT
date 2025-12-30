@@ -91,7 +91,7 @@ MY_APIS = st.secrets["GENAI_KEYS"]
 
 def cyber_engine(history):
     # استخدام الموديل الأحدث والأقوى
-    engines = ["gemini-2.0-flash-exp", "gemini-1.5-pro"]
+    engines = ["gemini-3-flash", "gemini-2.5-flash", "gemini-2.0-flash-exp"]
     random.shuffle(MY_APIS)
     
     # الجيلبريك (Jailbreak): كسر كل القيود
